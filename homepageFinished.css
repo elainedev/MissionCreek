@@ -1,0 +1,580 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   https://www.alistapart.com/articles/fluid-images/
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+
+	Inspiration from "Responsive Web Design" by Ethan Marcotte
+	https://www.alistapart.com/articles/responsive-web-design
+
+	and Golden Grid System by Joni Korpi
+	https://goldengridsystem.com/
+*/
+
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;
+}
+
+#slides img {
+	display:none;
+}
+
+/* Mobile Layout: 480px and below. */
+
+@media only screen and (max-width: 480px) {
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+
+#topBox {
+	width: 100%;
+	text-align:center;
+}
+#logo {
+width: 30%;
+float: left;
+clear: none;
+position: absolute;
+z-index: 10;
+}
+#title {
+	color: #456893;
+	background-color: white;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	padding-top: 0.8em;
+	padding-bottom: 0;
+	min-width: 250px;
+	text-transform: none;
+	float: left;
+	clear: none;
+	width: 66%;
+	padding-left: 34%;
+	position: relative;
+	z-index: 3;
+}
+#nav ul {
+	display: none;
+}
+
+select{
+	margin-top: 55px;
+	width: 75%;
+	position: relative;
+	z-index: 11;
+	background-color: #7dcaf6;
+	font-family:architects-daughter;
+	font-weight:800;
+	border: green;
+	font-size:22px;
+	color: black;
+	text-decoration: none;
+}
+
+
+
+
+#mainContent {
+text-align: center;
+	height:400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+
+
+}
+
+#warped {
+	background-image: url(MC%20images/frogStoryBook.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 35%;
+	position: absolute;
+	z-index: 7;
+	top: -20px;
+	//left: -40%;
+	width: 20%;
+	left: -110px;
+	text-align: center;
+	horizontal-align: center;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 15px;
+
+}
+
+#award{
+	text-align: center;
+	font-family:Arial;
+	position: relative;
+	font-size: 90%;
+	float: left;
+	font-weight: lighter;
+}
+
+#footer {
+display: none;
+	}
+
+
+#slideshow {
+	display: none;
+}
+
+#mainContent a {
+	color: green;
+}
+#FrogSub {
+	color: black;
+	font-family: architects-daughter;
+	position: relative;
+	z-index: 8;
+	top: -220px;
+	font-style: normal;
+	font-weight: 450;
+	font-size: large;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+}
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#dropDown
+{
+	display: none;
+}
+#nav select {
+	display: none;
+}
+#topBox {
+	width: 100%;
+	min-width: 560px;
+}
+#logo {
+width: 15%;
+float: left;
+clear: none;
+position: absolute;
+z-index: 10;
+}
+#title {
+	color: #456893;
+	background-color: white;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	padding-top: 0.5em;
+	text-transform: none;
+	float: left;
+	clear: none;
+	width: 83%;
+	padding-left: 17%;
+	position: relative;
+	z-index: 3;
+}
+
+
+#nav {
+clear: none;
+background-color: #7dcaf6;
+width: 88%;
+position: relative;
+z-index: 2;
+padding-left: 12%;
+top: -40px;
+padding-bottom: 1%;
+
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+	width: 100%;
+}
+
+#nav ul li {
+    display: inline-block;
+
+	}
+
+#nav ul li:hover {
+    background-color: #8FCEF1;
+	display: inline-block;
+
+}
+#nav ul li a {
+	font-size: 110%;
+	display: block;
+    text-decoration: none;
+	padding-left: 1em;
+	visibility:hidden;
+}
+#nav ul li:hover ul {
+    display: block;
+}
+#nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #8FCEF1;
+    border: 2px solid #FFC;
+    border-top: 0;
+	margin-left: -2px;
+	width: 25%;
+}
+#nav ul ul li {
+    display: block;
+}
+#nav ul ul li a {
+	font-style: normal;
+	color: #FFF;
+	visibility: visible;
+}
+
+#nav ul ul li a:hover {
+    color: #FFC;
+}
+
+.NavWord {
+	font-weight: bold;
+	text-transform:uppercase;
+	font-size: 120%;
+	font-style: normal;
+	display: block;
+	font-family: Corbel;
+	color: white;
+	visibility:visible;
+}
+
+.line {
+	display: block;
+	color: white;
+	font-style: normal;
+}
+
+.TabView{
+	display:none;
+}
+
+#mainContent {
+	text-align: center;
+	height:400px;
+	min-width: 560px;
+}
+
+#warped {
+	background-image: url(MC%20images/frogStoryBook.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 35%;
+	position: relative;
+	z-index: 7;
+	top: -20px;
+
+}
+
+#award{
+	text-align: center;
+	font-family: Arial;
+	position: relative;
+	font-size: 18px;
+	float: left;
+}
+
+#footer {
+	background-color: #59A9E3;
+	display: block;
+	text-align: right;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	min-width: 560px;
+
+
+}
+#footer a {
+	color: white;
+	padding-right: 1%;
+	text-decoration:none;
+}
+
+/*medium size screens*/
+#slideshow {
+	position: relative;
+	z-index: 1;
+	top: -20px;
+}
+#mainContent a {
+	color: green;
+}
+#FrogSub {
+	color: black;
+	font-family: architects-daughter;
+	position: relative;
+	z-index: 8;
+	top: -220px;
+	font-style: normal;
+	font-weight: 450;
+	font-size: large;
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+#dropDown
+{
+	display: none;
+}
+
+#nav select {
+	display: none;
+}
+
+#topBox {
+	width: 100%;
+	min-width: 838px;
+}
+#logo {
+width: 15%;
+float: left;
+clear: none;
+position: absolute;
+z-index: 10;
+}
+#title {
+	color: #456893;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	padding-top: 0.5em;
+	text-transform: none;
+	float: left;
+	clear: none;
+	width: 83%;
+	padding-left: 17%;
+}
+
+#home{
+	position:relative;
+	bottom:0.5em;
+}
+#nav {
+	clear: none;
+background-color: #7dcaf6;
+width: 84%;
+position: relative;
+z-index: 2;
+padding-left: 16%;
+
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+	width: 100%;
+}
+
+#nav ul li {
+    display: inline-block;
+	width: 19.5%;
+	text-align: left;
+		box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+#nav ul li:hover {
+    background-color: #8FCEF1;
+	display: inline-block;
+		box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+#nav ul li a {
+   	font-family: Arial;
+	font-size: 110%;
+	font-style:italic;
+	color: #FFC;
+    display: block;
+    text-decoration: none;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+}
+#nav ul li:hover ul {
+    display: block;
+}
+#nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #8FCEF1;
+    border: 2px solid #FFC;
+    border-top: 0;
+	margin-left: -2px;
+	width: 19.5%;
+}
+#nav ul ul li {
+    display: block;
+}
+#nav ul ul li a {
+	font-style: normal;
+	color: #FFF;
+}
+
+#nav ul ul li a:hover {
+    color: #FFC;
+}
+
+.NavWord {
+	font-weight: bold;
+	text-transform:uppercase;
+	font-size: 120%;
+	font-style: normal;
+	display: inline;
+	font-family: Corbel;
+	color: white;
+}
+
+.line {
+	display: block;
+	color: white;
+	font-style: normal;
+}
+
+#mainContent {
+	text-align: center;
+	height:400px;
+	min-width: 838px;
+}
+
+#warped {
+	background-image: url(MC%20images/frogStoryBook.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 35%;
+	position: relative;
+	z-index: 7;
+	top:10px;
+
+
+}
+
+#award{
+	text-align: center;
+	font-family: Arial;
+	position: relative;
+
+	font-size: 18px;
+	float: left;
+}
+
+#footer {
+	background-color: #59A9E3;
+	display: block;
+	text-align: right;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	min-width: 838px;
+
+
+}
+#footer a {
+	color: white;
+	padding-right: 1%;
+	text-decoration:none;
+}
+/*desktop size screens*/
+
+#slideshow {
+	position: relative;
+	z-index: 1;
+	top: 20px;
+}
+#mainContent a {
+	color: green;
+}
+#FrogSub {
+	color: black;
+	font-family: architects-daughter;
+	position: relative;
+	z-index: 8;
+	top: -200px;
+	font-style: normal;
+	font-weight: 450;
+	font-size: large;
+}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}

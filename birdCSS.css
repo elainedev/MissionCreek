@@ -1,0 +1,664 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   https://www.alistapart.com/articles/fluid-images/
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+
+	Inspiration from "Responsive Web Design" by Ethan Marcotte
+	https://www.alistapart.com/articles/responsive-web-design
+
+	and Golden Grid System by Joni Korpi
+	https://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;  /*need this to keep bottom acknowlegement bar at the bottom instead of having the woodpeckers be in the acknowlegement bar*/
+	margin-left: 0;
+	width: 100%;
+	float: left; /*need this to prevent text from being underlined; no idea why it gets underlined in teh first place*/
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;
+}
+
+
+.zeroMargin_mobile {
+margin-left: 0;
+}
+
+.hide_mobile {
+display: none;
+}
+
+/* Mobile Layout: 480px and below. */
+
+@media only screen and (max-width: 480px) {
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+
+#topBox {
+	width: 100%;
+	text-align:center;
+}
+#logo {
+width: 30%;
+float: left;
+clear: none;
+position: absolute;
+z-index: 10;
+}
+#title {
+	color: #456893;
+	background-color: white;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	padding-top: 0.8em;
+	text-transform: none;
+	float: left;
+	clear: none;
+	width: 66%;
+	padding-left: 34%;
+	min-width: 250px;
+	position: relative;
+	z-index: 3;
+}
+#nav ul {
+	display: none;
+}
+
+select{
+	margin-top: 55px;
+	width: 75%;
+	position: relative;
+	z-index: 11;
+	background-color: #7dcaf6;
+	font-family:architects-daughter;
+	font-weight:800;
+	border: green;
+	font-size:22px;
+	color: black;
+	text-decoration:none;
+}
+
+
+#mainContent h3 {
+	text-align:center;
+}
+
+#mainContent {
+font-family: Arial;
+}
+
+#heading{
+	display: none;
+}
+
+#mainContent p{
+	text-align:justify;
+}
+
+.floatRight{
+	float:right;
+	padding-bottom: 10px;
+	margin-left: 10px;
+	border: thin red;
+
+}
+
+#footer {
+display: none;
+	}
+
+
+#slideshow {
+	display: none;
+}
+
+#mainContent a {
+	color: green;
+}
+
+.birdType{
+
+	display:block;
+	clear: both;
+	padding-top: 1%;}
+
+#anchorNav{
+display: block;
+clear: both;
+text-align: center;
+margin-top: 30px;
+width: 100%;
+}
+
+#anchorNav ul li{
+	list-style-type:none;
+	width: 100%;
+
+	}
+
+#anchorNav ul li a {
+float: left;
+color: black;
+text-decoration:none;
+text-align:center;
+width: 33.3333%;
+font-family: Corbel;
+font-weight: bold;}
+
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#dropDown
+{
+	display: none;
+}
+#nav select {
+	display: none;
+}
+#topBox {
+	width: 100%;
+	min-width: 560px;
+}
+#logo {
+width: 15%;
+float: left;
+clear: none;
+position: absolute;
+z-index: 10;
+}
+#title {
+	color: #456893;
+	background-color: white;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	padding-top: 0.5em;
+	text-transform: none;
+	float: left;
+	clear: none;
+	width: 83%;
+	padding-left: 17%;
+	position: relative;
+	z-index: 3;
+}
+
+#map{
+	text-align:center;
+}
+#nav {
+clear: none;
+background-color: #7dcaf6;
+width: 88%;
+position: relative;
+z-index: 2;
+padding-left: 12%;
+top: -40px;
+padding-bottom: 1%;
+
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+	width: 100%;
+}
+
+#nav ul li {
+    display: inline-block;
+
+	}
+
+#nav ul li:hover {
+    background-color: #8FCEF1;
+	display: inline-block;
+
+}
+#nav ul li a {
+	font-size: 110%;
+	display: block;
+    text-decoration: none;
+	padding-left: 1em;
+	visibility:hidden;
+	position: relative;
+	z-index: 15;
+}
+#nav ul li:hover ul {
+    display: block;
+}
+#nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #8FCEF1;
+    border: 2px solid #FFC;
+    border-top: 0;
+	margin-left: -2px;
+	width: 25%;
+}
+#nav ul ul li {
+    display: block;
+}
+#nav ul ul li a {
+	font-style: normal;
+	color: #FFF;
+	visibility: visible;
+}
+
+#nav ul ul li a:hover {
+    color: #FFC;
+}
+
+.NavWord {
+	font-weight: bold;
+	text-transform:uppercase;
+	font-size: 120%;
+	font-style: normal;
+	display: block;
+	font-family: Corbel;
+	color: white;
+	visibility:visible;
+	position: relative;
+	z-index: 15;
+}
+
+.line {
+	display: block;
+	color: white;
+	font-style: normal;
+}
+
+.TabView{
+	display:none;
+}
+
+#mainContent {
+font-family: Arial;
+}
+
+#heading{
+	text-align: center;
+	font-size: x-large;
+	font-family: Corbel;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+
+#mainContent p{
+	text-align:justify;
+}
+
+#mainContent .floatRight{
+	float:right;
+	margin-left: 10px;
+	border: medium solid #C3B04E;
+}
+
+.section{
+	background-image:url(MC%20images/cardstock.jpg);
+	background-repeat:round;
+	margin-bottom:2.5%;
+	padding: 2%;
+	width: 96%;
+}
+#footer {
+	background-color: #59A9E3;
+	display: block;
+	text-align: right;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+
+
+}
+#footer a {
+	color: white;
+	padding-right: 1%;
+	text-decoration:none;
+}
+
+.birdType{
+
+	display:block;
+	clear: both;
+	padding-top: 1%;}
+
+#anchorNav{
+display: block;
+clear: both;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 0;
+}
+
+#anchorNav ul li{
+	list-style-type:none;
+	width: 70%;
+	margin-left:14.5%;
+}
+
+#anchorNav ul li a {
+float: left;
+color: black;
+text-decoration:none;
+text-align:center;
+width: 33.3%;
+font-family: Corbel;
+font-weight: bold;
+font-size:110%;}
+
+#anchorNav ul li a:hover{
+	color:#B19638;
+}
+/*#moveUp{
+	position: relative;
+	top:-25px;
+}*/
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+#dropDown
+{
+	display: none;
+}
+
+#nav select {
+	display: none;
+}
+
+#topBox {
+	width: 100%;
+	min-width: 838px;
+	margin-bottom: 30px;
+}
+#logo {
+width: 15%;
+float: left;
+clear: none;
+position: absolute;
+z-index: 10;
+}
+#title {
+	color: #456893;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	padding-top: 0.5em;
+	text-transform: none;
+	float: left;
+	clear: none;
+	width: 83%;
+	padding-left: 17%;
+}
+
+#home{
+	position:relative;
+	bottom:0.5em;
+}
+#nav {
+	clear: none;
+background-color: #7dcaf6;
+width: 84%;
+position: relative;
+z-index: 2;
+padding-left: 16%;
+
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+	width: 100%;
+}
+
+#nav ul li {
+    display: inline-block;
+	width: 19.5%;
+	text-align: left;
+		box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+#nav ul li:hover {
+    background-color: #8FCEF1;
+	display: inline-block;
+		box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+#nav ul li a {
+   	font-family: Arial;
+	font-size: 110%;
+	font-style:italic;
+	color: #FFC;
+    display: block;
+    text-decoration: none;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+}
+#nav ul li:hover ul {
+    display: block;
+}
+#nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #8FCEF1;
+    border: 2px solid #FFC;
+    border-top: 0;
+	margin-left: -2px;
+	width: 19.5%;
+}
+#nav ul ul li {
+    display: block;
+}
+#nav ul ul li a {
+	font-style: normal;
+	color: #FFF;
+}
+
+#nav ul ul li a:hover {
+    color: #FFC;
+}
+
+.NavWord {
+	font-weight: bold;
+	text-transform:uppercase;
+	font-size: 120%;
+	font-style: normal;
+	display: inline;
+	font-family: Corbel;
+	color: white;
+}
+
+.line {
+	display: block;
+	color: white;
+	font-style: normal;
+}
+
+#mainContent {
+	font-family: Arial;
+	width: 100%;
+	min-width: 838px;
+
+}
+
+#mainContent p {
+	text-align:justify;
+}
+
+#heading{
+	text-align: center;
+	font-size: x-large;
+	font-family: Corbel;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+
+.floatRight{
+	float: right;
+	margin-left: 20px;
+	border: medium solid #C3B04E;
+}
+
+.section{
+	margin:1%;
+	float:left;
+	width:45%;
+	clear:none;
+	display: inline-block;
+	//background-color:#7BD198;
+	//border:medium solid green;
+	background-image:url(MC%20images/cardstock.jpg);
+	background-repeat: round;
+	padding: 1.5%;}
+
+#footer {
+	background-color: #59A9E3;
+	display: block;
+	text-align: right;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+
+
+}
+#footer a {
+	color: white;
+	padding-right: 1%;
+	text-decoration:none;
+}
+
+
+.birdType{
+	display:block;
+	clear: both;
+	padding-top: 0.4%;
+}
+#anchorNav{
+display: block;
+clear: both;
+text-align: center;
+margin-top: 30px;
+
+}
+
+#anchorNav ul li{
+	list-style-type:none;
+	width: 50%;
+	margin-left: 24%;
+
+}
+
+#anchorNav ul li a {
+float: left;
+color: black;
+text-decoration:none;
+text-align:center;
+width: 33.3%;
+font-family: Corbel;
+font-weight: bold;
+font-size: 110%;}
+
+#anchorNav ul li a:hover{
+	color:#B19638;
+}
+
+/*#moveUp{
+	position: relative;
+	top:-25px;
+}*/
+
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}
