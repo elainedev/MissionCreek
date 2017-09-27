@@ -5,34 +5,34 @@ $(document).ready(function() {
   var nextSlideSource;
 
   // image fades out completely to transparent/white background first
-  // setInterval(
-  //   function () {
-  //     $("#slide").fadeOut(600,
-  //       function () {
-  //         if (nextSlide.next().length === 0) {
-  //           nextSlide = $('#slides img:first-child');
-  //         } else {
-  //           nextSlide = nextSlide.next();
-  //         }
-  //         nextSlideSource = nextSlide.attr("src");
-  //         $("#slide").attr("src", nextSlideSource).fadeIn(400);
-  //       }
-  //     )
-  //   },
-  // 3000);
-
-  // no fade out; image just jumps to next slide
   setInterval(
     function () {
+      $("#slide").fadeToggle(900,
+        function () {
           if (nextSlide.next().length === 0) {
             nextSlide = $('#slides img:first-child');
           } else {
             nextSlide = nextSlide.next();
           }
           nextSlideSource = nextSlide.attr("src");
-          $("#slide").attr("src", nextSlideSource).fadeIn(1000);
-        },
+          $("#slide").attr("src", nextSlideSource).fadeToggle(900);
+        }
+      )
+    },
   3000);
+
+  // no fade out; image just jumps to next slide
+  // setInterval(
+  //   function () {
+  //         if (nextSlide.next().length === 0) {
+  //           nextSlide = $('#slides img:first-child');
+  //         } else {
+  //           nextSlide = nextSlide.next();
+  //         }
+  //         nextSlideSource = nextSlide.attr("src");
+  //         $("#slide").attr("src", nextSlideSource).fadeIn(1000);
+  //       },
+  // 3000);
 
 
 
